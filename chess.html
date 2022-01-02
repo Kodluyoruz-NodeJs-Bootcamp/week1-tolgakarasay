@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles/chess_style.css">
+    <script src="scripts/chess_script.js"></script>
+</head>
+
+<body>
+    <h1>Chess Puzzle</h1>
+    <h2>(Drag and Drop to Play)</h2>
+
+    <table id="board">
+        <tr>
+            <td id="c01" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img id="b_king" src="images/b_king.jpg" draggable="true" ondragstart="drag(event)">
+            </td>
+            <td id="c02" class="darkCell" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td id="c03" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td id="c04" class="darkCell" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        </tr>
+        <tr>
+            <td id="c05" class="darkCell" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td id="c06" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="b_rook" src="images/b_rook.png"
+                    draggable="true" ondragstart="drag(event)"></td>
+            <td id="c07" class="darkCell" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td id="c08" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        </tr>
+        <tr>
+            <td id="c09" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </td>
+            <td id="c10" class="darkCell" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td id="c11" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td id="c12" class="darkCell" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img id="w_rook" src="images/w_rook.png" draggable="true" ondragstart="drag(event)">
+            </td>
+        </tr>
+        <tr>
+            <td id="c13" class="darkCell" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="w_horse"
+                    src="images/w_horse.png" draggable="true" ondragstart="drag(event)"></td>
+            <td id="c14" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td id="c15" class="darkCell" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img id="w_bishop" src="images/w_bishop.png" draggable="true" ondragstart="drag(event)">
+            </td>
+            <td id="c16" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="w_king" src="images/w_king.png"
+                    draggable="true" ondragstart="drag(event)"></td>
+        </tr>
+    </table>
+</body>
+
+</html>

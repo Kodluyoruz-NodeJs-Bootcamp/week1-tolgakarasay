@@ -1,0 +1,41 @@
+img {
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+td {
+  width: auto;
+  height: auto;
+}
+
+table {
+  margin: auto;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: black;
+}
+
+div {
+  margin: auto;
+  padding: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.options {
+  display: inline-block;
+  margin: 2%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  margin: 2%;
+  padding: 1%;
+}

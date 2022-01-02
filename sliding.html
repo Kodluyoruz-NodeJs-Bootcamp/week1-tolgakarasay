@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+        <link rel="stylesheet" href="styles/index_style.css">
+        <script src="scripts/sliding_script.js"></script>
+</head>
+
+<body>
+        <h1>Sliding Puzzle</h1>
+        <h2>(Drag and Drop to Play)</h2>
+
+        <table id="board">
+                <tr>
+                        <td id="c11" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="i11"
+                                        src="images/image_part_001.jpg" draggable="true" ondragstart="drag(event)"></td>
+                        <td id="c12" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="i12"
+                                        src="images/image_part_002.jpg" draggable="true" ondragstart="drag(event)"></td>
+                        <td id="c13" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="i13"
+                                        src="images/image_part_003.jpg" draggable="true" ondragstart="drag(event)"></td>
+
+                </tr>
+                <tr>
+                        <td id="c21" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="i21"
+                                        src="images/image_part_004.jpg" draggable="true" ondragstart="drag(event)"></td>
+                        <td id="c22" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="i22"
+                                        src="images/image_part_005.jpg" draggable="true" ondragstart="drag(event)"></td>
+                        <td id="c23" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="i23"
+                                        src="images/image_part_006.jpg" draggable="true" ondragstart="drag(event)"></td>
+
+                </tr>
+                <tr>
+                        <td id="c31" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="i31"
+                                        src="images/image_part_007.jpg" draggable="true" ondragstart="drag(event)"></td>
+                        <td id="c32" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="i32"
+                                        src="images/image_part_008.jpg" draggable="true" ondragstart="drag(event)"></td>
+                        <td id="c33" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+
+                </tr>
+
+
+        </table>
+
+        <div id="button-container">
+                <button onclick="shuffle()">Shuffle</button>
+        </div>
+
+        <div id="score-board">
+
+        </div>
+</body>
+
+</html>
