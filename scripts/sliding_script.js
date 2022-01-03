@@ -14,20 +14,27 @@ function drop(ev) {
   ev.preventDefault();
   let data = ev.dataTransfer.getData("text");
   destination = parseInt(ev.target.id.slice(1));
-  console.log(destination);
+  // console.log(destination);
 
   if (
+    // Seçilen resim parçası bir TD elementi üzerine mi sürüklendi kontrolü
     ev.target.tagName == "TD" &&
+    // Seçilen resim parçasının sürüklendiği yerde başka bir child element var mı kontrolü
     ev.target.childElementCount == 0 &&
+    // Seçilen resim parçası bir adım sağa, sola, aşağı veya yukarı mı sürüklendi kontrolü
     (Math.abs(home - destination) == 1 || Math.abs(home - destination) == 10)
   ) {
+    // Resim parçasını sürüklediğimiz table data hücresine ekle
     ev.target.appendChild(document.getElementById(data));
+    // Oyun sonucunun yazdığı alanı sıfırla.
     resetBoard();
+    // En son yapılan hamleden sonra oyun kazanılmış mı kontrol et
     checkWin();
   }
 }
 
 function shuffle() {
+  // Bu fonksiyon rasgele 2 resim parçası seçer ve yerlerini birbiriyle değiş tokuş eder. Bu işlemi 10 kere tekrarlar.
   resetBoard();
   for (let i = 0; i < 10; i++) {
     let random1 = Math.floor(Math.random() * 3) + 1;
@@ -54,6 +61,7 @@ function shuffle() {
 }
 
 function checkWin() {
+  // Bu fonksiyon tüm resim parçalarının doğru konumlarda olup olmadığını kontrol eder.
   let cells = Array.from(document.getElementsByTagName("TD"));
   let count = 0;
 
@@ -75,5 +83,6 @@ function checkWin() {
 }
 
 function resetBoard() {
+  // Bu fonksiyon oyun sonucunun yazdığı alanı temizler.
   document.getElementById("score-board").innerHTML = "";
 }
